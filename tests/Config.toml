@@ -1,2 +1,3 @@
 [dilhasha.petstore]
-petStoreServiceURL = "http://localhost:9090"
+hostEp = "localhost"
+port = 9090
