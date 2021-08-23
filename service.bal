@@ -20,7 +20,7 @@ service / on petstoreListener {
     # + return - pet details as json if the pet with given id exists
     #            or http:NotFound if the pet with given id does not exist
     #            or http:BadRequest if the request format is incorrect
-    resource function get pet/[string petId]() returns @http:Payload {mediaType: "application/json+id"} Pet|http:BadRequest|http:NotFound {
+    resource function get pet/[string petId]() returns @http:Payload Pet|http:BadRequest|http:NotFound {
         Pet? pet = self.petInventory[petId];
         if (pet is Pet) {
             return pet;
@@ -36,7 +36,7 @@ service / on petstoreListener {
     # + return - Added pet details as json if the operation was successful
     #            or error message as json if pet with given id already exists
     #            or http:BadRequest if the request format is incorrect
-    resource function post pet(@http:Payload {mediaType: ["application/json"]} Pet payload) returns @http:Payload {mediaType: "application/json+id"} Pet|http:MethodNotAllowed|http:BadRequest {
+    resource function post pet(@http:Payload Pet payload) returns @http:Payload Pet|http:MethodNotAllowed|http:BadRequest {
         if (self.petInventory[payload.id] is ()) {
             self.petInventory[payload.id] = payload;
             return payload;

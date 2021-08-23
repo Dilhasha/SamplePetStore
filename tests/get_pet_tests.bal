@@ -1,7 +1,7 @@
 import ballerina/test;
 import ballerina/http;
 
-http:Client petStoreClient = check new ("http://" + hostEp + ":" + port.toString());
+http:Client petStoreClient = check new ("http://localhost:9090");
 
 # Get pet details for a non existent pet id
 # + return - Return an error or nil if there is no error  
