@@ -1,0 +1,23 @@
+// Apply the base plugin to handle lifecycle tasks
+apply plugin: 'base'
+
+task balBuild(type: Exec) {
+    // Define the command line task for Ballerina build
+    commandLine 'bal', 'build'
+    // Ensure the working directory is set to where your Ballerina files are
+    workingDir './'  // Adjust this path according to your project structure
+}
+
+task balTest(type: Exec) {
+    // Define the command line task for Ballerina test with coverage
+    commandLine 'bal', 'test', '--code-coverage', '--coverage-format=xml'
+    // Ensure the working directory is set appropriately
+    workingDir './'  // Adjust this path according to your project structure
+}
+
+// Optionally, create a custom task named 'testBallerina' if you want a more descriptive task name
+task testBallerina(dependsOn: 'balTest') {
+}
+
+// Set build to depend on balBuild
+build.dependsOn balBuild
