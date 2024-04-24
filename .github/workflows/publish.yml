@@ -42,8 +42,8 @@ jobs:
 
       -   name: Build the Package
           run: |
-            gradle build -x test
-            gradle test --code-coverage --coverage-format=xml
+            gradle clean build -x test
+            gradle clean test
 
       -   name: Upload coverage reports to Codecov
           uses: codecov/codecov-action@v4.0.1
