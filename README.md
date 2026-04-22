@@ -11,3 +11,7 @@ A sample pet store application for demonstration purposes.
 ## Getting Started
 
 Clone this repository and follow the setup instructions to get started with the Sample Pet Store application.
+
+## Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request.
