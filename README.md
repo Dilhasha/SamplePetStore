@@ -15,3 +15,7 @@ Clone this repository and follow the setup instructions to get started with the 
 ## Contributing
 
 We welcome contributions! Please feel free to submit a Pull Request.
+
+## License
+
+This project is available for use under the MIT License.
