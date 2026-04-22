@@ -1,5 +1,8 @@
 # SamplePetStore
 
+![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A sample pet store application for demonstration purposes.
 
 ## Features
